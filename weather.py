@@ -9,7 +9,9 @@ def get_current_weather():
     print('\n*** Get Current Weather Conditions ***\n')
 
     city = input('Enter a city name: ')
-    unit = input('Enter a unit measurement: ')
+    unit = input(
+        '\n[metric (Celsius)] - [imperial (Fahrenheit)] - [standard (Kelvin)]\n'
+        'Enter a unit measurement: ')
 
     requests_url = f'https://api.openweathermap.org/data/2.5/weather?appid={
         os.getenv("API_KEY")}&q={city}&units={unit}'
